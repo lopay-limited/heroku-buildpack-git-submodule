@@ -54,6 +54,6 @@ git checkout -q ${SOURCE_VERSION:-master} > /dev/null
 echo "-----> Fetched shallow history from $GIT_REPO_URL"
 
 # initialize all the submodules
-git submodule -q update --init --recursive
+git submodule -q update --init --recursive --depth 1
 echo "-----> Checked out all submodules"
 git submodule status | sed 's/^/       * /'
